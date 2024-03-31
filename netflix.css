@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500");
+
+ /*This* sets a style in the CSS that overides everything*/
+
+* {
+    box-sizing: border-box; /*Border-Box size grows as the padding and margin grow*/
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+/*applies styles to the lists, anchor tags and the button*/
+li, a, button {
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 500;
+    font-size: 14px;
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+logo {
+    cursor: pointer;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    justify-content: flex-start;
+    padding: 0 20;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #0088a9;
+}
+
+button {
+    margin-left: 300px;
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(0,136,169,0.8);
+}
+
+/*Start of Gallery images*/
+
+.img-gallery {
+    width: 90%; /*width of screen set to 90%*/
+    margin: 25px auto 50px; /*Top margin is 100px, left and right are automatically adjusted and bottom is 50px */
+    display: grid; /*Createsa grid layout*/
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    grid-gap: 20px; /* defines grid gap of 30px */
+
+}
+
+.img-gallery img {
+    width: 100%;
+    cursor: pointer; /*adds finger pointer of=ver gallery images*/
+}
+
+.img-gallery img:hover {
+    transform: scale(0.8) rotate(-15deg); /*Makes image 0.8 of size and rotates when hovering*/
+    border-radius: 20px; /*When hovered image has rouned edges to 20%*/
+    box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+}
+
+/*titles ahead of the image gallery*/
+
+
+.titles p {
+    margin-left: 5%;
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 600;
+    font-size: 18px;
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+p:hover {
+    transition: all 0.3s ease 0s;
+    color:#0088a9;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+    width: 100%;
+    padding-right: 10%;
+    padding-top: 20px;
+    
+}
+
+.footer p {
+    font-family: "Montserrat", sans-serif; 
+    font-size: 14px;
+    color: grey;
+}    
+
+.footer2 {font-family: "Montserrat", sans-serif; 
+font-size: 14px;
+color: grey;
+}    
+
+/*<<<<<<<<<<<------Rresponsive layout for mobile---------->>>>>>>>>>>>>>>*/
+
+@media screen and (max-width: 600px) {
+
+.li, .a {
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 500;
+    font-size: 14px;
+    color: #ecf0f1;
+    text-decoration: none;
+}
+    
+.nav_links .li {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding: 0 20;
+    } 
+
+    header {
+        display: flex;
+        flex-direction: column;
+     /* justify-content: space-around -was here will shift the outside two items to the right and left and evenly space the ones in the middle*/
+        align-items: center;
+        padding: 5px 10px;
+    }
+}
+
+/*<<<<<<<<<<<------Responsive layout for Tablet---------->>>>>>>>>>>>>>>*/
+
+@media screen and (min-width: 800px) {
+
+}
